@@ -24,3 +24,31 @@ body {
 .main-search input:focus {
   outline: none;
 }
+
+.car-item {
+  display: flex;
+  border: 1px solid lightgray;
+  margin: 10px;
+}
+
+.car-item .left {
+  width: 100px;
+}
+
+.car-item .left img {
+  width: 100%;
+}
+
+.car-item .right {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.car-item .right h4,h6 {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
