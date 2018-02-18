@@ -52,3 +52,24 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.car-detail {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.car-detail img {
+  height: 400px !important;
+}
+
+.car-detail h2,
+.car-detail h4 {
+  margin: 0px;
+}
+
+.car-detail .content {
+  padding: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}

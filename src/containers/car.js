@@ -9,10 +9,27 @@ class Car extends Component {
     this.props.carDetail(this.props.match.params.id)
   }
 
+  renderDetail = ({ detail }) => {
+    if (detail) {
+      return detail.map(item => {
+        return (
+          <div key={item.id} className="car-detail">
+            <img src={`/images/${item.image}`} alt="" />
+            <div className="content">
+              <h2>{item.model}</h2>
+              <h4>{item.brand}</h4>
+              <p>{item.description}</p>
+            </div>
+          </div>
+        );
+      });
+    }
+  }
+
   render() {
     return (
       <div>
-        Car {this.props.match.params.id}
+        {this.renderDetail(this.props.cars)}
       </div>
     );
   }
@@ -21,7 +38,7 @@ class Car extends Component {
 function mapStateToProps(state) {
   console.log(state)
   return {
-    carDetail: state.carDetail
+    cars: state.cars
   }
 }
 
