@@ -10,7 +10,7 @@ import './app.css';
 import reducers from './reducers';
 
 import App from './components/App';
-import Car from './components/car';
+import Car from './containers/car';
 
 import registerServiceWorker from './registerServiceWorker';
 

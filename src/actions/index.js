@@ -7,9 +7,21 @@ export function getCars(keyword) {
     method: 'GET'
   })
   .then(res => res.json());
-  
+
   return {
     type: 'SEARCH_CARS',
+    payload: request
+  }
+}
+
+export function carDetail(id) {
+  const request = fetch(`${URL}/carsIndex?id=${id}`, {
+    method: 'GET'
+  })
+  .then(res => res.json());
+
+  return {
+    type: 'CAR_DETAIL',
     payload: request
   }
 }
