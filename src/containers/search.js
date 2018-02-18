@@ -29,7 +29,7 @@ class Search extends Component {
         <form onSubmit={this.searchCars}>
           <input
             type="text"
-            onChange={(event) => this.handleChange(event)}
+            onChange={this.handleChange}
             value={this.state.keyword}
             />
         </form>
